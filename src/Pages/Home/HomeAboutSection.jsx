@@ -27,7 +27,7 @@ export default function HomeAboutSection() {
 
   return (
     <div>
-      <div className="hero  min-h-screen">
+      <div className="hero  max-h-screen">
         <div className="hero-content flex-col lg:flex-row">
           {/* --------- left side image ---------------- */}
           <img src={homeAbout} className="max-w-sm rounded-sm shadow-2xl" />
