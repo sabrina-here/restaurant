@@ -3,6 +3,8 @@ import Banner from "./Banner";
 import HomeAboutSection from "./HomeAboutSection";
 import aboutSideImage from "../../assets/aboutSideImage.png";
 import CustomerRev from "./CustomerRev";
+import bookingImage from "../../assets/bookingBgImage.jpeg";
+import BookingSection from "./BookingSection";
 
 export default function Home() {
   return (
@@ -24,7 +26,16 @@ export default function Home() {
       </div>
       <div>HomeSecondSection Bottom Three cards</div>
       <div>Popular Food Items Carousel section</div>
-      <div>BookingSection Background image with form</div>
+      <div
+        style={{
+          backgroundImage: `url(${bookingImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <BookingSection />
+      </div>
 
       {/* ----------- customer review section ----------------- */}
       <div>

@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import revImage from "../../assets/reviewImage.jpeg";
 import { FaSquare } from "react-icons/fa";
 import { RiDoubleQuotesL } from "react-icons/ri";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 function CustomerRev() {
+  const [rightArrowClicked, setRightArrowClicked] = useState(true);
+  const [leftArrowClicked, setLeftArrowClicked] = useState(false);
+
+  const handleRightClick = () => {
+    setRightArrowClicked(true);
+    setLeftArrowClicked(false);
+  };
+  const handleLeftClick = () => {
+    setLeftArrowClicked(true);
+    setRightArrowClicked(false);
+  };
+
   return (
-    <div>
+    <div className="relative sm:mb-24">
       {/* --------------- section title and carousel button will be here(absolute) ------- */}
-      <div className="my-3">
+      <div className="my-3 lg:w-1/2 ">
         <div className=" text-primary my-2 font-bold text-sm">
           <FaSquare className="inline text-xs m-1 mb-2" />
           Crispy, Every Bite Taste
@@ -15,8 +29,8 @@ function CustomerRev() {
         <div className="babas-font text-4xl">WHAT SOME OF MY CUSTOMERS SAY</div>
       </div>
 
-      <div className="carousel w-full">
-        <div id="slide1" className="carousel-item relative w-full">
+      <div className="carousel  w-full">
+        <div id="slide1" className="carousel-item  w-full">
           {/* --------------------- card inside the carousel -------------- */}
 
           <div className="lg:w-full flex flex-col lg:flex-row-reverse rounded-sm">
@@ -52,12 +66,24 @@ function CustomerRev() {
           </div>
 
           {/* ----------------- button for carousel ----------------- */}
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" className="btn btn-circle">
-              ❮
+          <div className="absolute lg:top-2 sm:-bottom-16 lg:right-5 sm:right-1/4 sm:left-1/4  flex transform lg:justify-end sm:justify-evenly">
+            <a
+              href="#slide3"
+              className="btn btn-circle bg-gray-300 mr-2"
+              onClick={handleRightClick}
+            >
+              <MdOutlineKeyboardArrowLeft
+                className={`${rightArrowClicked && "text-primary"} text-3xl`}
+              />
             </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
+            <a
+              href="#slide2"
+              className="btn btn-circle bg-gray-300"
+              onClick={handleLeftClick}
+            >
+              <MdKeyboardArrowRight
+                className={`${leftArrowClicked && "text-primary"} text-3xl`}
+              />
             </a>
           </div>
         </div>
