@@ -7,7 +7,7 @@ export default function Banner() {
     <div className="bg-gradient-to-tl from-primary to-secondary">
       <div className="sm,md:flex-col lg:max-w-[80%] lg:mx-auto lg:flex items-center  justify-center mx-auto p-10">
         <div className="relative font-bold text-white lg:w-80% lg:mx-auto">
-          <p className="lg:absolute lg:py-2 lg:z-20 lg:w-[200%] my-5 -top-16 text-6xl font-semibold lg:bg-primary/50">
+          <h1 className="babas-font lg:absolute lg:py-2 lg:z-20 lg:w-[150%] my-5 -top-16 text-6xl font-semibold lg:bg-primary/50">
             <span className=" inline-block w-full whitespace-nowrap p-2">
               TASTE THE AUTHENTIC
             </span>
@@ -15,7 +15,7 @@ export default function Banner() {
             <span className=" inline-block w-full whitespace-nowrap p-2">
               SAUDI CUISINE
             </span>
-          </p>
+          </h1>
 
           <p className="font-thin lg:mt-32 my-4">
             Among the best Saudi Chefs in the world, <br /> serving you
@@ -28,7 +28,7 @@ export default function Banner() {
         <img
           src={bannerImage}
           alt="stake image"
-          className="lg:w-[50%] w-[80%] sm:mx-auto"
+          className="lg:w-[50%] w-[80%] lg:ms-0 sm:mx-auto rounded-sm"
         />
       </div>
     </div>

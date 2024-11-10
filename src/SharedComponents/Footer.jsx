@@ -12,7 +12,7 @@ import footerImage from "../assets/footerImage.jpeg";
 export default function Footer() {
   return (
     <div
-      className=" text-white"
+      className=" text-white babas-font"
       style={{
         backgroundImage: `url(${footerImage})`,
         backgroundSize: "cover",
@@ -22,7 +22,7 @@ export default function Footer() {
     >
       <div className="bg-black/50 ">
         <div className="w-[80%] mx-auto text-center ">
-          <div className="text-4xl pt-20 pb-4">
+          <div className="text-4xl pt-20 pb-4 ">
             WE ARE READY TO GIVE YOU THE BEST DINING EXPERIENCE
           </div>
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center justify-center">
