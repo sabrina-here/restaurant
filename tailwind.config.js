@@ -7,6 +7,7 @@ export default {
         btn_color: "#febf00",
         primary: "#a63126",
         secondary: "#c52c1f",
+        accent: "#febf00",
       },
     },
   },

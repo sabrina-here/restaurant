@@ -32,7 +32,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex lg:justify-between items-center bg-primary text-white p-2 sticky top-0 ">
+    <div className="flex lg:justify-between items-center bg-primary text-white p-2 sticky top-0 z-40">
       <div className="flex justify-evenly items-center">
         {/* ------- Dropdown menu for mobile screen ------------ */}
         <div className="dropdown flex-1 justify-end">
@@ -54,7 +54,7 @@ export default function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-black"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[50] mt-3 w-52 p-2 shadow text-black"
           >
             {navItems.map((item, index) => (
               <li key={index}>
