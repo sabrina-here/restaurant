@@ -14,3 +14,7 @@ p,
 a {
   font-family: "Roboto", sans-serif; /* or another font */
 }
+
+.react-datepicker {
+  width: 250px !important; /* Adjust width as needed */
+}
