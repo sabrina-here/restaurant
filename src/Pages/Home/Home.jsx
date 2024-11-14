@@ -3,8 +3,8 @@ import Banner from "./Banner";
 import HomeAboutSection from "./HomeAboutSection";
 import aboutSideImage from "../../assets/aboutSideImage.png";
 import CustomerRev from "./CustomerRev";
-import bookingImage from "../../assets/bookingBgImage.jpeg";
-import BookingSection from "./BookingSection";
+import CustomerReview from "./CustomerReview";
+import AutoCarousel from "./AutoCarousel";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <div>
         <Banner />
       </div>
-      <div>
+      {/* <div>
         <div className="max-w-[80%] mx-auto lg:max-w-[75%]">
           <HomeAboutSection />
         </div>
@@ -23,27 +23,16 @@ export default function Home() {
             alt=""
           />
         </div>
-      </div>
-      <div>HomeSecondSection Bottom Three cards</div>
-      <div>Popular Food Items Carousel section</div>
-      <div
-        style={{
-          backgroundImage: `url(${bookingImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <BookingSection />
-      </div>
+      </div> */}
+      {/* <div>HomeSecondSection Bottom Three cards</div> */}
+      {/* <div className="max-w-[1920px] w-[80%] mx-auto lg:w-[75%] my-5">
+        <AutoCarousel />
+      </div> */}
 
       {/* ----------- customer review section ----------------- */}
-      <div>
-        <div className="max-w-[80%] mx-auto lg:max-w-[75%] my-5">
-          <CustomerRev />
-        </div>
-      </div>
-      <div></div>
+      {/* <div className="max-w-[1920px] w-[80%] mx-auto lg:w-[75%] my-5">
+        <CustomerReview />
+      </div> */}
     </div>
   );
 }

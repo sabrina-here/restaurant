@@ -21,7 +21,7 @@ export default function Footer() {
       }}
     >
       <div className="bg-black/50 ">
-        <div className="w-[80%] mx-auto text-center ">
+        <div className="w-[80%] mx-auto text-center max-w-[1920px]">
           <div className="text-4xl pt-20 pb-4 ">
             WE ARE READY TO GIVE YOU THE BEST DINING EXPERIENCE
           </div>

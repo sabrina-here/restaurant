@@ -1,42 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import CommonBtn from "../Components/CommonBtn";
 
 export default function Navbar() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const navItems = [
-    {
-      title: "Home",
-      path: "/home",
-    },
-    {
-      title: "About",
-      path: "/about",
-    },
-    {
-      title: "Portfolio",
-      path: "/portfolio",
-    },
-    {
-      title: "Clients",
-      path: "/clients",
-    },
-    {
-      title: "Blog",
-      path: "/blog",
-    },
-    {
-      title: "Contact",
-      path: "/contact",
-    },
+    { title: "Home", path: "/home" },
+    { title: "About", path: "/about" },
+    { title: "Portfolio", path: "/portfolio" },
+    { title: "Clients", path: "/clients" },
+    { title: "Blog", path: "/blog" },
+    { title: "Contact", path: "/contact" },
   ];
 
   return (
-    <div className="flex lg:justify-between items-center bg-primary text-white p-2 sticky top-0 z-40">
-      <div className="flex justify-evenly items-center">
-        {/* ------- Dropdown menu for mobile screen ------------ */}
-        <div className="dropdown flex-1 justify-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+    <div className="sm:w-full max-w-[1920px] bg-primary text-white p-2 sticky top-0 z-40">
+      <div className="flex items-center justify-between w-full lg:hidden">
+        <Link to="/" className="lg:hidden p-2">
+          <img className="w-[160px]" src={logo} alt="restaurant" />
+        </Link>
+        {/* Dropdown menu for mobile screen */}
+        <div className="dropdown">
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="btn btn-ghost lg:hidden"
+            aria-label="Toggle navigation"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -51,37 +42,36 @@ export default function Navbar() {
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[50] mt-3 w-52 p-2 shadow text-black"
-          >
-            {navItems.map((item, index) => (
-              <li key={index}>
-                <Link>{item.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <a className="">
-          <button>
-            <img className="w-[160px] mr-14 p-2" src={logo} alt="restaurant" />
           </button>
-        </a>
-        <div className="hidden lg:flex">
+          {isDropdownOpen && (
+            <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[50] mt-3 w-52 p-2 shadow text-black right-0">
+              {navItems.map((item, index) => (
+                <li key={index}>
+                  <Link to={item.path}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+
+      {/* --------------- nav for large screens ------------ */}
+      <div className="hidden lg:flex lg:flex-1 items-center justify-between w-full lg:w-auto">
+        <div className="flex justify-between items-center">
+          <Link to="/" className=" mr-14 p-2">
+            <img className="w-[160px]" src={logo} alt="restaurant" />
+          </Link>
           <ul className="menu menu-horizontal px-1">
             {navItems.map((item, index) => (
               <li key={index}>
-                <Link>{item.title}</Link>
+                <Link to={item.path}>{item.title}</Link>
               </li>
             ))}
           </ul>
         </div>
-      </div>
-      <div className=" flex justify-end  items-center">
-        <a className=" hidden lg:flex">
+        <div className="ml-auto">
           <CommonBtn>Book A Table</CommonBtn>
-        </a>
+        </div>
       </div>
     </div>
   );
