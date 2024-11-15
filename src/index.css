@@ -19,6 +19,31 @@ a {
   width: 250px !important; /* Adjust width as needed */
 }
 
-.slick-slide > div {
-  margin: 0 15px;
+.slick-prev,
+.slick-next {
+  color: red !important;
 }
+
+.slick-arrow:before {
+  color: red;
+  font-size: 50px;
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+
+@media (min-width: 1024px) {
+  /* Adjust for larger screens */
+  .slick-slide > div {
+    margin: 0 15px;
+  }
+}
+
+/* .slick-next {
+  right: 10px; 
+}
+
+.slick-prev {
+  left: 10px; 
+} */

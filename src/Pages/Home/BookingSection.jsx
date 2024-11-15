@@ -39,7 +39,7 @@ function BookingSection() {
   ));
 
   return (
-    <div className="text-white p-5 lg:w-[75%] mx-auto sm:w-[90%]">
+    <div className="text-white p-5 lg:w-[75%] mx-auto sm:w-[80%]">
       {/* ------------- Booking Title ------------------ */}
       <div className="my-3 lg:w-1/2 flex justify-center lg:justify-start">
         <div>

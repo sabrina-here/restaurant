@@ -8,6 +8,7 @@ export default {
         primary: "#a63126",
         secondary: "#c52c1f",
         accent: "#febf00",
+        bg_secondary: "#fbf7f2",
       },
     },
   },
