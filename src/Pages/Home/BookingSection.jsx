@@ -13,11 +13,12 @@ function BookingSection() {
     const booking = {
       name: data.name,
       email: data.email,
-      reservationDate: data.reservationDate,
+      reservationDate: startDate,
       totalPeople: data.totalPeople,
       message: data.message,
     };
     console.log(booking);
+    reset();
   };
 
   const currentDate = new Date(); // Get current date and time
@@ -56,7 +57,7 @@ function BookingSection() {
       </div>
 
       {/* --------- Booking Form --------------------- */}
-      <div className="lg:w-[65%] sm:w-full">
+      <div className="lg:w-[57%] sm:w-full">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input

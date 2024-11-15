@@ -38,7 +38,7 @@ export default function Home() {
         </div>
         <div className="relative w-full hidden lg:block">
           <img
-            className="absolute w-[120px] left-0 -top-80"
+            className="absolute w-[120px] left-0 -top-[500px]"
             src={autoCarLeft}
             alt=""
           />
@@ -64,7 +64,7 @@ export default function Home() {
       </div>
       <div className="relative w-full hidden lg:block">
         <img
-          className="absolute w-[90px] left-0 -top-96"
+          className="absolute w-[90px] left-0 -top-[593px]"
           src={revLeft}
           alt=""
         />

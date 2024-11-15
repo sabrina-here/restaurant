@@ -9,7 +9,7 @@ export default function Banner() {
         <div className="flex flex-col lg:flex-row  items-center  justify-center  ">
           {/* -- text section -- */}
           <div className="w-[80%] mx-auto lg:w-1/2 font-bold text-white lg:p-16">
-            <h1 className="  babas-font lg:absolute lg:py-1 lg:z-20  my-5 lg:top-24 text-5xl lg:text-7xl font-semibold lg:bg-primary/50">
+            <h1 className="  babas-font lg:absolute lg:py-1 lg:z-20  my-5 lg:top-24 text-5xl lg:text-7xl xl:text-[121px] font-semibold lg:bg-primary/50">
               <span className=" inline-block  whitespace-nowrap ">
                 TASTE THE AUTHENTIC
               </span>
