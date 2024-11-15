@@ -3,30 +3,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FaSquare } from "react-icons/fa";
+import burger from "../../assets/hamburger.jpeg";
+import pizza from "../../assets/pizza.jpeg";
 
 const foodItems = [
   {
-    image: "/src/assets/hamburger.jpeg",
+    image: burger,
     title: "VEGETABLES BURGER 1",
     description: "Barbecue Italian cuisine pizza",
   },
   {
-    image: "/src/assets/pizza.jpeg",
+    image: pizza,
     title: "VEGETABLES BURGER",
     description: "Barbecue Italian cuisine pizza",
   },
   {
-    image: "/src/assets/hamburger.jpeg",
+    image: burger,
     title: "VEGETABLES BURGER",
     description: "Barbecue Italian cuisine pizza",
   },
   {
-    image: "/src/assets/pizza.jpeg",
+    image: pizza,
     title: "VEGETABLES BURGER",
     description: "Barbecue Italian cuisine pizza",
   },
   {
-    image: "/src/assets/hamburger.jpeg",
+    image: burger,
     title: "VEGETABLES BURGER 2",
     description: "Barbecue Italian cuisine pizza",
   },
